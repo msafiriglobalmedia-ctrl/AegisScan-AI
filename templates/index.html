@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AegisScan AI — Hazard Scan Demo</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header>
+    <h1>AegisScan<span>AI</span></h1>
+    <p class="tag">See risk before it strikes.</p>
+    <p class="meta">Model: <code>{{ model_id }}</code> · v{{ version }}</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>1. Scan</h2>
+      <video id="cam" autoplay playsinline muted></video>
+      <div class="btns">
+        <button id="start">Start Camera</button>
+        <button id="capture">Capture &amp; Scan</button>
+        <label class="file-btn">
+          Upload Image
+          <input type="file" id="file" accept="image/*">
+        </label>
+      </div>
+      <canvas id="canvas" hidden></canvas>
+      <div id="preview"></div>
+    </section>
+
+    <section class="card">
+      <h2>2. Result</h2>
+      <div id="result">No scan yet.</div>
+      <button id="alert" disabled>Send Alert</button>
+    </section>
+
+    <section class="card">
+      <h2>3. Recent incidents</h2>
+      <ul id="incidents"><li>Loading…</li></ul>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
