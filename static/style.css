@@ -1,0 +1,34 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: #0b0f14;
+  color: #e6edf3;
+}
+header { padding: 24px; text-align: center; border-bottom: 1px solid #1f2937; }
+header h1 { margin: 0; font-size: 2.2rem; letter-spacing: 1px; }
+header h1 span { color: #22d3ee; }
+.tag { margin: 4px 0; color: #94a3b8; font-style: italic; }
+.meta { font-size: 0.85rem; color: #64748b; }
+main { max-width: 780px; margin: 0 auto; padding: 20px; display: grid; gap: 20px; }
+.card { background: #111827; border: 1px solid #1f2937; border-radius: 12px; padding: 18px; }
+.card h2 { margin-top: 0; font-size: 1.1rem; color: #22d3ee; }
+video, #preview img { width: 100%; border-radius: 10px; background: #000; margin-bottom: 12px; }
+.btns { display: flex; gap: 10px; flex-wrap: wrap; }
+button, .file-btn {
+  background: #22d3ee; color: #001018; border: 0;
+  padding: 10px 16px; border-radius: 8px; font-weight: 600; cursor: pointer;
+}
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+.file-btn { display: inline-block; }
+.file-btn input { display: none; }
+#result ul { padding-left: 20px; }
+.lvl { padding: 2px 8px; border-radius: 6px; font-weight: 700; font-size: 0.8rem; }
+.lvl.low      { background: #064e3b; color: #6ee7b7; }
+.lvl.medium   { background: #78350f; color: #fcd34d; }
+.lvl.high     { background: #7c2d12; color: #fdba74; }
+.lvl.critical { background: #7f1d1d; color: #fca5a5; }
+.note { font-size: 0.8rem; color: #64748b; }
+#incidents { list-style: none; padding: 0; }
+#incidents li { padding: 8px 0; border-bottom: 1px solid #1f2937; font-size: 0.9rem; }
+#incidents small { color: #64748b; font-size: 0.75rem; margin-left: 6px; }
